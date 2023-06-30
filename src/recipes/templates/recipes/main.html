@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/main.css' %}">
+    <title>Recipe List</title>
+    <style>
+      body {
+        background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Recipe list</h1> {% comment%} HTML tag for heading  {% endcomment%}
+    <div class="grid">
+       {% for object in object_list %}
+      <div class="grid_item">
+        <div>
+          <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
+        </div>
+        <div>
+          <a class="recipe_name" href ="{{object.get_absolute_url}}">
+            {{object.name}}
+          </a>{% comment%} add links to recipe names  {% endcomment%}
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+  </body>  
+</html>
