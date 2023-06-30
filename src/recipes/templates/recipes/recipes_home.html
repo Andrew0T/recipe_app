@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}">
+    <title>Recipe App Home</title>
+    <style>
+      body {
+        background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+  <body>
+    <header class="page-header__item">
+    <h1>Welcome to my Recipe App</h1>
+    <nav class="page-header__item">
+      <ul role="menubar" class="nav-list">
+        <li role="presentation">
+          <a href="list/" role="menuitem" class="nav-list__item">Register</a>
+        </li>
+        <li role="presentation">
+          <a href="list/" role="menuitem" class="nav-list__item">Login</a>
+        </li>
+      </ul>  
+    </nav>
+    <br>
+  </header>
+  </body>
+</html>
