@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/detail.css' %}">
+    <title>Recipe Details</title>
+    <style>
+      body {
+        background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+    <body>
+      <div class="detail_modal">
+        <h1>{{object.name}}</h1>
+        <br>
+        <img class="recipe_image" src="{{object.pic.url}}">
+        <div>
+        <b>Name: </b> {{object.name}}  <br>
+        <b>Ingredients: </b> {{object.ingredients}} <br>
+        <b>Cooking_Time: </b> {{object.cooking_time}} <br>
+        <b>Type: </b> {{object.type}} <br>
+        <b>Difficulty: </b> {{object.calculate_difficulty}}  <br>
+        <b>Instructions: </b>
+        <br> {{object.instructions|safe}}
+        </div>
+        <br>
+        <div>
+          <button onclick="goBack()">Back to Recipe List</button>
+        </div>
+      </div>
+      <script>function goBack(){
+        window.history.back();
+      }
+      </script>
+    </body>
+</html>
