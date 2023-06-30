@@ -39,4 +39,4 @@ class RecipeModelTest(TestCase):
   def test_type_max_length(self):
     recipe = Recipe.objects.get(id=1)
     max_length = recipe._meta.get_field('type').max_length
-    self.assertEqual(max_length, 20)
+    self.assertEqual(max_length, 50)
