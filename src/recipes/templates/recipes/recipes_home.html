@@ -19,17 +19,12 @@
   <body>
     <header class="page-header__item">
     <h1>Welcome to my Recipe App</h1>
-    <nav class="page-header__item">
-      <ul role="menubar" class="nav-list">
-        <li role="presentation">
-          <a href="list/" role="menuitem" class="nav-list__item">Register</a>
-        </li>
-        <li role="presentation">
-          <a href="list/" role="menuitem" class="nav-list__item">Login</a>
-        </li>
-      </ul>  
-    </nav>
-    <br>
-  </header>
+      <nav class="page-header__item">
+        <div role="menubar" class="nav-list">
+          <a href="list/" role="menuitem" class=" login__btn">Register</a>
+          <a href="{% url 'login' %}" role="menuitem" class="login__btn">Login</a>
+        </div>  
+      </nav>
+    </header>
   </body>
 </html>
