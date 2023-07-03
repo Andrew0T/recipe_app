@@ -17,7 +17,14 @@
       </style>
   </head>
   <body>
-    <h1>Recipe list</h1> {% comment%} HTML tag for heading  {% endcomment%}
+    <header class="page-header__item">
+      <h1>Recipe list</h1> {% comment%} HTML tag for heading  {% endcomment%}
+      <nav class="page-header__item">
+        <div role="menubar" class="nav-list">
+          <a href ="{% url 'logout' %}" role="menuitem" class="logout__btn"> Logout </a>
+        </div>
+      </nav>
+    </header>
     <div class="grid">
        {% for object in object_list %}
       <div class="grid_item">
