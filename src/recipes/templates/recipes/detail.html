@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -17,8 +17,16 @@
       </style>
   </head>
     <body>
+      <header class="page-header__item">
+        <h1>Recipe for:</h1>
+        <nav class="page-header__item">
+          <div role="menubar" class="nav-list"> 
+            <a href ="{% url 'logout' %}" role="menuitem" class="nav-list__item logout__btn"> Logout </a>
+          </div>
+        </nav>
+      </header>
       <div class="detail_modal">
-        <h1>{{object.name}}</h1>
+        <h2>{{object.name}}</h2>
         <br>
         <img class="recipe_image" src="{{object.pic.url}}">
         <div>
@@ -32,7 +40,7 @@
         </div>
         <br>
         <div>
-          <button onclick="goBack()">Back to Recipe List</button>
+          <button class="back__btn" onclick="goBack()">Back to Recipe List</button>
         </div>
       </div>
       <script>function goBack(){
