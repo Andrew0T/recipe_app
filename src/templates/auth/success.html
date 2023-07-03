@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}">
+    <title>Sign up Page</title>
+    <style>
+      body {
+        background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+  <body>
+    <header class="page-header__item">
+      <h1>You have successfully logged out</h1>
+      <a href="{% url 'recipes:list' %}" class="login__btn">Recipe App</a>
+      <nav class="page-header__item nav-list">
+        <div class="nav-list">
+          <a href="{% url 'login' %}" class="login__btn">Login</a>
+        </div>  
+      </nav>
+    </header>
+  </body>
+</html>
