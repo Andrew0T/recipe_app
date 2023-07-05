@@ -2,9 +2,6 @@
 *.bak
 *.pyc
 
-# Database
-*.sqlite3
-
 # Folders
 /src/recipes/migrations
 /src/users/migrations
