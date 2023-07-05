@@ -18,10 +18,11 @@
   </head>
   <body>
     <header class="page-header__item">
-      <h1>Recipe list</h1> {% comment%} HTML tag for heading  {% endcomment%}
-      <nav class="page-header__item">
+      <h1>Welcome to my Recipe App</h1>
+      <nav>
         <div role="menubar" class="nav-list">
-          <a href ="{% url 'logout' %}" role="menuitem" class="logout__btn"> Logout </a>
+          <a href="{% url 'recipes:searches' %}" class="logout__btn">Search</a>            
+          <a href="{% url 'logout' %}" class="logout__btn">Logout</a>            
         </div>
       </nav>
     </header>
