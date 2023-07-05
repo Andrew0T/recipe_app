@@ -11,4 +11,7 @@ Key features
 
 Technologies
 
-Python, Django and CSS
+ Python 
+ Django 
+ Pillow
+ CSS
