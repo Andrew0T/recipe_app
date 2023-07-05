@@ -18,10 +18,12 @@
   </head>
     <body>
       <header class="page-header__item">
-        <h1>Recipe for:</h1>
-        <nav class="page-header__item">
-          <div role="menubar" class="nav-list"> 
-            <a href ="{% url 'logout' %}" role="menuitem" class="nav-list__item logout__btn"> Logout </a>
+        <h1>Welcome to my Recipe App</h1>
+        <nav>
+          <div role="menubar" class="nav-list">        
+            <a href="{% url 'recipes:searches' %}" class="logout__btn">Search</a>
+            <a href="{% url 'recipes:list' %}" class="logout__btn">Recipes</a>
+            <a href="{% url 'logout' %}" class="logout__btn">Logout</a>
           </div>
         </nav>
       </header>
