@@ -1,5 +1,6 @@
 from django.test import TestCase
 from .models import Recipe
+from .forms import RecipeSearchForm
 
 # Create your tests here.
 class RecipeModelTest(TestCase):
@@ -40,3 +41,14 @@ class RecipeModelTest(TestCase):
     recipe = Recipe.objects.get(id=1)
     max_length = recipe._meta.get_field('type').max_length
     self.assertEqual(max_length, 50)
+
+class RecipeFormTest():
+
+  def test_form_valid_name(self):
+    form = RecipeSearchForm(request.POST)
+    field_label = form._meta.get_field('name').verbose_name
+    self.assertTrue(form.is_valid())
+
+  def test_form_render_select_chart_type(self):
+    form = RecipeSearchForm()
+    self.assertIn('chart_type', form.as_p())
