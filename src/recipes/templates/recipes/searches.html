@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/search.css' %}">
+    <title>Search Recipe</title>
+    <style>
+      body {
+        background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+  </head>
+    <body>
+			<header class="page-header__item">
+        <h1>Welcome to my Recipe App</h1>
+        <nav>
+					<div role="menulist" class="nav-list">
+						<a href="{% url 'recipes:list' %}" class="logout_btn">Recipes</a>
+						<a href="{% url 'logout' %}" class="logout_btn">Logout</a>
+					</div>
+				</nav>
+      </header>
+      <h2> Search Recipes</h2>
+      <br>
+      <main class="search_container">
+        <div>
+          <a><form action="" method="POST">
+              {% csrf_token %}
+              {{form}}
+              <button type="submit" >Search</button>    
+          </form></a>
+          <br>        
+          {% if recipes_df %}
+          {{recipes_df|safe}}
+          <br>
+          <img src="data:image/png;base64, {{chart|safe}}">
+          {% else %}
+          <h3> Sorry no data available</h3>
+          {% endif %}
+        </div>
+      </main>
+    </body>
+</html>
