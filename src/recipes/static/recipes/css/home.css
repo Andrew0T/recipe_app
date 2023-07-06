@@ -44,6 +44,12 @@ h2 {
   color: var(--button-font);
 }
 
+h3 {
+  text-align: center;
+  color: var(--button-font);
+}
+
+
 .page-header {
   display: flex;
   width: 100px;
@@ -85,7 +91,8 @@ h2 {
   max-width: 420px;
 }
 
-.login__btn {
+.login__btn,
+.logout__btn {
   background-color: none;
   color: var(--button-font);
   font-size: 20px;
