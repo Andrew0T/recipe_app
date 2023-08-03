@@ -5,3 +5,4 @@
 # Folders
 /src/recipes/migrations
 /src/users/migrations
+/scr/db.sqlite3
