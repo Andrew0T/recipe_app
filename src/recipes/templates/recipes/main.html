@@ -31,10 +31,12 @@
        {% for object in object_list %}
       <div class="grid_item">
         <div>
-          <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
+          <a href="{{object.get_absolute_url}}">
+            <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
+          </a>
         </div>
         <div>
-          <a class="recipe_name" href ="{{object.get_absolute_url}}">
+          <a class="recipe_name" href="{{object.get_absolute_url}}">
             {{object.name}}
           </a>{% comment%} add links to recipe names  {% endcomment%}
         </div>
