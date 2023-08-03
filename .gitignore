@@ -1,3 +1,7 @@
 # Text backup files
 *.bak
+*.pyc
 
+# Folders
+scr/recipes/migrations
+scr/users/migrations
