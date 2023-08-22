@@ -5,3 +5,6 @@
 # Folders
 scr/recipes/migrations
 scr/users/migrations
+
+# db
+db.sqlite3
