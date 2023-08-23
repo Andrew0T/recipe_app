@@ -4,4 +4,5 @@
 
 # Folders
 /src/recipes/migrations
+/src/recipes/__pycache__
 /src/users/migrations
