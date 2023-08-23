@@ -44,6 +44,11 @@ h2 {
   color: var(--button-font);
 }
 
+h3 {
+  text-align: center;
+  color: var(--button-font);
+}
+
 .page-header {
   display: flex;
   width: 100px;
@@ -102,7 +107,7 @@ h2 {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   height: 30px;
-  width: 120px;
+  width: 90px;
   border-radius: 1px;
   
 }
