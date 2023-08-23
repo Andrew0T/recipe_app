@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/detail.css' %}">
     <title>Recipe Details</title>
     <style>
@@ -28,12 +29,8 @@
           </div>
         </nav>
       </header>
-<<<<<<< Updated upstream
-      <div class="detail_modal">
-=======
       <br>
       <div class="detail_container">
->>>>>>> Stashed changes
         <h2>{{object.name}}</h2>
         <br>
         <img class="recipe_image" src="{{object.pic.url}}">
