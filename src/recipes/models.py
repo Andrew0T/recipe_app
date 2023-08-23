@@ -1,7 +1,7 @@
 from django.db import models
 from django.shortcuts import reverse
 
-type_choices =(
+TYPE_CHOICES =(
   ('Breakfast', 'Breakfast'),
   ('Drink', 'Drink'),
   ('Lunch', 'Lunch'),
@@ -15,7 +15,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=120)
     ingredients = models.CharField(max_length=300, help_text="You must use a comma to separate the ingredients.")
     cooking_time = models.PositiveIntegerField(help_text="In minutes")
-    type = models.CharField(max_length=50, choices=type_choices)
+    type = models.CharField(max_length=50, choices=TYPE_CHOICES)
     instructions = models.TextField()
     pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
 
