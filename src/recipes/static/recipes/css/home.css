@@ -85,17 +85,14 @@ h2 {
   max-width: 420px;
 }
 
-.login__btn {
+.login__btn,
+.logout__btn {
   background-color: none;
   color: var(--button-font);
   font-size: 20px;
   font-family: 'Lato', sans-serif;
   border-radius: 5px;
   height: 40px;
-<<<<<<< Updated upstream
-  width: 160px;
-}
-=======
   width: 80px;
 }
 
@@ -105,8 +102,7 @@ h2 {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   height: 30px;
-  width: 150px;
+  width: 120px;
   border-radius: 1px;
-  position: inherit;
+  
 }
->>>>>>> Stashed changes
