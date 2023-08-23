@@ -44,9 +44,6 @@ def search_view(request, *args, **kwargs):
 				f'<td>{recipe_name}</td>',
 				f'<td><a href="/list/{recipe_id}">{recipe_name}</a></td>')
 				
-
-			# breakpoint()
-				
 	context={
 			'search_form': search_form,
 			'recipes_df': recipes_df,
