@@ -25,12 +25,12 @@ class RecipeModelTest(TestCase):
   def test_recipe_name_max_length(self):
     recipe = Recipe.objects.get(id=1)
     max_length = recipe._meta.get_field('name').max_length
-    self.assertEqual(max_length, 50)
+    self.assertEqual(max_length, 120)
 
   def test_ingredients_name_max_length(self):
     recipe = Recipe.objects.get(id=1)
     max_length = recipe._meta.get_field('ingredients').max_length
-    self.assertEqual(max_length, 255)
+    self.assertEqual(max_length, 300)
   
   def test_cooking_time_max_length(self):
     recipe = Recipe.objects.get(id=1)
@@ -42,13 +42,27 @@ class RecipeModelTest(TestCase):
     max_length = recipe._meta.get_field('type').max_length
     self.assertEqual(max_length, 50)
 
-class RecipeFormTest():
-
+class RecipeSearchFormTest(TestCase):
+  
   def test_form_valid_name(self):
-    form = RecipeSearchForm(request.POST)
-    field_label = form._meta.get_field('name').verbose_name
-    self.assertTrue(form.is_valid())
+    form = RecipeSearchForm()
+    self.assertIn('name', form.as_p())
 
   def test_form_render_select_chart_type(self):
     form = RecipeSearchForm()
     self.assertIn('chart_type', form.as_p())
+
+  def test_form_valid_data(self):
+    form = RecipeSearchForm(
+      data={
+        'name': 's',
+        'chart_type': '#2'})
+    self.assertTrue(form.is_valid())
+
+  def test_form_invalid_data(self):
+    form = RecipeSearchForm(
+      data={
+        'cooking_time':'',
+        'chart_type': ''})
+    self.assertFalse(form.is_valid())
+    
