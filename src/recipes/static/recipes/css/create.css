@@ -1,0 +1,8 @@
+.create_container {
+  display: inline-block;
+  font-size: 14px;
+  border: 1px solid;
+  padding: 20px;
+  width: 60%;
+  max-width: 700px;
+}
