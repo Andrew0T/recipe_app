@@ -21,13 +21,19 @@
         <h1>Welcome to my Recipe App</h1>
         <nav>
           <div role="menubar" class="nav-list">        
-            <a href="{% url 'recipes:searches' %}" class="logout__btn">Search</a>
-            <a href="{% url 'recipes:list' %}" class="logout__btn">Recipes</a>
+            <a href="{% url 'recipes:searches' %}" class="login__btn">Search</a>
+            <a href="{% url 'recipes:list' %}" class="login__btn">Recipes</a>
+            <a href="{% url 'recipes:create' %}" class="login__btn">Create</a>
             <a href="{% url 'logout' %}" class="logout__btn">Logout</a>
           </div>
         </nav>
       </header>
+<<<<<<< Updated upstream
       <div class="detail_modal">
+=======
+      <br>
+      <div class="detail_container">
+>>>>>>> Stashed changes
         <h2>{{object.name}}</h2>
         <br>
         <img class="recipe_image" src="{{object.pic.url}}">
@@ -42,7 +48,7 @@
         </div>
         <br>
         <div>
-          <button class="back__btn" onclick="goBack()">Back to Recipe List</button>
+          <button class="back__btn" onclick="goBack()">Go Back</button>
         </div>
       </div>
       <script>function goBack(){
