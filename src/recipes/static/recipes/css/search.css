@@ -79,8 +79,12 @@ h3 {
 }
 
 .search_container {
+<<<<<<< Updated upstream
   margin: 20px auto;
   width: 80%;
+=======
+  width: 60%;
+>>>>>>> Stashed changes
 }
 
 .logout_btn {
