@@ -92,5 +92,21 @@ h2 {
   font-family: 'Lato', sans-serif;
   border-radius: 5px;
   height: 40px;
+<<<<<<< Updated upstream
   width: 160px;
 }
+=======
+  width: 80px;
+}
+
+.back__btn {
+  background-color: none;
+  color: var(--button-font);
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  height: 30px;
+  width: 150px;
+  border-radius: 1px;
+  position: inherit;
+}
+>>>>>>> Stashed changes
