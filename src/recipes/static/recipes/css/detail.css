@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 :root {
   --background-color: #ffffff;
   --font-color: #000000;
@@ -19,6 +20,9 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 
 .main {
   clear: both;
@@ -67,6 +71,9 @@ h2 {
 
 .detail_modal {
   margin: auto;
+=======
+.detail_container {
+>>>>>>> Stashed changes
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
@@ -86,6 +93,7 @@ h2 {
   min-width: 180px;
   min-height: 90px;
 }
+<<<<<<< Updated upstream
 
 .back__btn {
   background-color: none;
@@ -106,3 +114,5 @@ h2 {
   height: 40px;
   width: 160px;
 }
+=======
+>>>>>>> Stashed changes
