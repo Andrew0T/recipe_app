@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<<<<<<< Updated upstream
+=======
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/main.css' %}">
+>>>>>>> Stashed changes
     <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/search.css' %}">
     <title>Search Recipe</title>
     <style>
@@ -20,9 +25,16 @@
 			<header class="page-header__item">
         <h1>Welcome to my Recipe App</h1>
         <nav>
+<<<<<<< Updated upstream
 					<div role="menulist" class="nav-list">
 						<a href="{% url 'recipes:list' %}" class="logout_btn">Recipes</a>
 						<a href="{% url 'logout' %}" class="logout_btn">Logout</a>
+=======
+					<div role="menubar" class="nav-list">
+						<a href="{% url 'recipes:list' %}" class="login__btn">Recipes</a>
+						<a href="{% url 'recipes:create' %}" class="login__btn">Create</a>
+            <a href="{% url 'logout' %}" class="logout__btn">Logout</a>
+>>>>>>> Stashed changes
 					</div>
 				</nav>
       </header>
@@ -30,20 +42,32 @@
       <br>
       <main class="search_container">
         <div>
-          <a><form action="" method="POST">
+          <form action="" method="POST">
               {% csrf_token %}
-              {{form}}
+              {{search_form}}
               <button type="submit" >Search</button>    
-          </form></a>
-          <br>        
+          </form>
+        </div>
+        <br>
+        <div>
           {% if recipes_df %}
-          {{recipes_df|safe}}
-          <br>
-          <img src="data:image/png;base64, {{chart|safe}}">
+          {{recipes_df|safe}}          
+        </div>
+        <br>
+        <div>
+          <img src="data:image/png;base64, {{chart}}">
           {% else %}
           <h3> Sorry no data available</h3>
           {% endif %}
         </div>
+        <br>
+        <div>
+          <button class="back__btn" onclick="goBack()">Go Back</button>
+        </div>
       </main>
+      <script>function goBack(){
+        window.history.back();
+      }
+      </script>
     </body>
 </html>
