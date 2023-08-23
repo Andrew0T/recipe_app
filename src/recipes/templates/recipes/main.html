@@ -5,13 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<<<<<<< Updated upstream
-    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/main.css' %}">
-=======
     <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}"> 
-    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/main.css' %}"
-    >
->>>>>>> Stashed changes
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/main.css' %}">
     <title>Recipe List</title>
     <style>
       body {
@@ -37,7 +32,9 @@
        {% for object in object_list %}
       <div class="grid_item">
         <div>
-          <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
+          <a href="{{object.get_absolute_url}}">
+            <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
+          </a>
         </div>
         <div>
           <a class="recipe_name" href ="{{object.get_absolute_url}}">
