@@ -1,9 +1,6 @@
 from django import forms	#import django forms
-<<<<<<< Updated upstream
-=======
 from django.forms import ModelForm
 from .models import Recipe, TYPE_CHOICES
->>>>>>> Stashed changes
 
 CHART__CHOICES = (			#specify choices as a tuple
 	('#1', 'Bar chart'),	# when user selects "Bar chart", it is stored as "#1"
@@ -13,10 +10,6 @@ CHART__CHOICES = (			#specify choices as a tuple
 
 #define class-based Form imported from Django forms
 class RecipeSearchForm(forms.Form):	
-<<<<<<< Updated upstream
-    name= forms.CharField(max_length=120)
-    chart_type = forms.ChoiceField(choices=CHART__CHOICES)
-=======
 	name= forms.CharField(max_length=120)
 	chart_type = forms.ChoiceField(choices=CHART__CHOICES)
 
@@ -54,4 +47,3 @@ class EditRecipeForm(forms.Form):
 # 						'instructions',
 # 						'pic',
 # 							]
->>>>>>> Stashed changes
