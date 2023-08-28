@@ -34,21 +34,12 @@ a:active {
   color: var(--active-color);
 }
 
-h1 {
-  text-align: center;
-  color: var(--button-font);
-}
-
-h2 {
-  text-align: center;
-  color: var(--button-font);
-}
-
+h1,
+h2,
 h3 {
   text-align: center;
   color: var(--button-font);
 }
-
 
 .page-header {
   display: flex;
