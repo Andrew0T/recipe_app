@@ -3,8 +3,6 @@
 *.pyc
 
 # Folders
-scr/recipes/migrations
-scr/users/migrations
 
 # File
 my_settings_key.py
