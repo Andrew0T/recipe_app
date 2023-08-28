@@ -90,4 +90,3 @@ def create_view(request):
 	}
 
 	return render(request, 'recipes/create.html', context)
-
