@@ -1,5 +1,8 @@
 Recipe App
 
+![searches](https://github.com/Andrew0T/recipe_app/assets/113891991/e0f9cf76-1c32-4ca0-a176-bad0e9a83efe)
+
+
 Overview
 
 Recipe App is a full stack application built by Python using Django MVT web framework and it comes with the admin panel to perform CRUD operations in or on the database. 
@@ -22,4 +25,8 @@ Technologies
     matplotlib
     Pillow
     CSS
+
+Video
+
+https://github.com/Andrew0T/Python/blob/main/Exercise_2.7/User_Journey.mp4
 
