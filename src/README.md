@@ -28,6 +28,8 @@ Technologies
 
 Video
 
-https://github.com/Andrew0T/recipe_app/assets/113891991/9753a433-646c-4e4c-9774-12295741c806
+https://github.com/Andrew0T/recipe_app/assets/113891991/4051e89f-a8be-46ca-9e24-82f2bd64c4cc
+
+
 
 
