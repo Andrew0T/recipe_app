@@ -28,5 +28,6 @@ Technologies
 
 Video
 
-https://github.com/Andrew0T/Python/blob/main/Exercise_2.7/User_Journey.mp4
+https://github.com/Andrew0T/recipe_app/assets/113891991/9753a433-646c-4e4c-9774-12295741c806
+
 
