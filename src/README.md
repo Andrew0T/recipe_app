@@ -12,6 +12,7 @@ Key features
     Details of each recipe displayed upon selection
     Search function allows full, partial word or single letter to be used as criteria
     Return recipes are shown and data visualizaions based on the user's search criteria
+    18 preload Recipes are included
 
 Technologies
 
