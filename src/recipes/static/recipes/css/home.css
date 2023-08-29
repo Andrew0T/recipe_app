@@ -34,12 +34,9 @@ a:active {
   color: var(--active-color);
 }
 
-h1 {
-  text-align: center;
-  color: var(--button-font);
-}
-
-h2 {
+h1,
+h2,
+h3 {
   text-align: center;
   color: var(--button-font);
 }
@@ -85,12 +82,39 @@ h2 {
   max-width: 420px;
 }
 
-.login__btn {
-  background-color: none;
+.login__btn,
+.logout__btn {
+  background-color: transparent;
   color: var(--button-font);
+  text-decoration: none;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
   font-size: 20px;
   font-family: 'Lato', sans-serif;
   border-radius: 5px;
   height: 40px;
-  width: 160px;
+  width: 80px;
+}
+
+.back__btn {
+  background-color: none;
+  color: var(--button-font);
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  height: 30px;
+  width: 150px;
+  border-radius: 1px;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-media__icons {
+  width: 30px;
+  height: 30px;
 }

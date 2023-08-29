@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/home.css' %}">
-    <link rel="stylesheet" href="text/css" href="{% static 'recipes/css/main.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/search.css' %}">
-    <title>Search Recipe</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/css/detail.css' %}">
+    <title>Edit Recipe</title>
     <style>
       body {
         background-image: url("{% static 'recipes/images/background_snack.jpg' %}");
@@ -24,40 +23,31 @@
         <nav>
 					<div role="menubar" class="nav-list">
 						<a href="{% url 'recipes:list' %}" class="login__btn">Recipes</a>
-						<a href="{% url 'recipes:create' %}" class="login__btn">Create</a>
-						<a href="{% url 'recipes:edit_recipe' %}" class="login__btn">Edit</a>
+            <a href="{% url 'recipes:searches' %}" class="login__btn">Search</a>
+            <a href="{% url 'recipes:create' %}" class="login__btn">Create</a>          
             <a href="{% url 'logout' %}" class="logout__btn">Logout</a>
 					</div>
 				</nav>
       </header>
-      <h2> Search Recipes</h2>
+      <h2>Edit this Recipe: </h2>
       <br>
-      <main class="search_container">
-        <div>
-          <form action="" method="POST">
-              {% csrf_token %}
-              {{search_form}}
-              <button type="submit" >Search</button>  
-          </form>
-        </div>
-        <br>
-        <div>
-          {% if recipes_df %}
-          {{recipes_df|safe}}          
-        </div>
-        <br>
-        <div>
-          <img src="data:image/png;base64, {{chart}}">
-          {% else %}
-          <h3> Sorry no data available</h3>
-          {% endif %}
-        </div>
+      <div class="create_container">
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <br>
+          {{object.get_absolute_url}}
+          <br>
+          {{edit_recipe_form.as_div}}
+          <br>
+          <br>
+          <button type="submit" class="back__btn">Edit recipe</button>
+        </form>
         <br>
         <div>
           <button class="back__btn" onclick="goBack()">Go Back</button>
         </div>
-      </main>
-      <script>function goBack(){window.history.back();}</script>
+      </div>
+      <script>function goBack(){ window.history.back();}</script>
     </body>
     <footer class="page-footer">
       <br>

@@ -1,0 +1,8 @@
+# Text backup files
+*.bak
+*.pyc
+
+# Folders
+
+# File
+my_settings_key.py

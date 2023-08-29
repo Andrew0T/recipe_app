@@ -48,7 +48,7 @@ def get_chart(chart_type, data, **kwargs):
     #select chart_type based on user input from the form
     if chart_type == '#1':
         #plot bar chart between recipe name on x-axis and cooking_time on y-axis
-        plt.bar(data['name'], data['cooking_time'])
+        plt.bar(data['cooking_time'], data['name'])
 
     elif chart_type == '#2':
         labels=kwargs.get('labels')
@@ -56,7 +56,7 @@ def get_chart(chart_type, data, **kwargs):
 
     elif chart_type == '#3':
         #plot line chart based on recipe name on x-axis and meal type on y-axis
-        plt.plot(data['name'], data['cooking_time'])
+        plt.plot(data['cooking_time'], data['name'])
     else:
         print ('unknown chart type')
     
