@@ -31,5 +31,10 @@ Video
 https://github.com/Andrew0T/recipe_app/assets/113891991/4051e89f-a8be-46ca-9e24-82f2bd64c4cc
 
 
+To see the live version
 
+https://my-recipe-app-20230829-6f8ec0be54fd.herokuapp.com/
 
+Login use
+Username: u16831
+Password: Have@Look23
