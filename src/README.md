@@ -38,3 +38,12 @@ https://my-recipe-app-20230829-6f8ec0be54fd.herokuapp.com/
 Login use
 Username: u16831
 Password: Have@Look23
+
+Challenges: 
+
+    1. was unable to move the database from sqlite to a format that heroku would read, searched and this answer
+     https://stackoverflow.com/questions/61336258/how-to-transfer-your-local-sqlite3-data-to-heroku#61336319
+    
+    2. the recipe images fail to load and console error 404, not sure why. Searching for answers
+    
+
