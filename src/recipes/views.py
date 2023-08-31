@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Recipe
 from .forms import RecipeSearchForm, CreateRecipeForm, EditRecipeForm
 import pandas as pd
@@ -14,6 +15,21 @@ def recipe_home(request):
 class RecipeListView(LoginRequiredMixin, ListView):
   model = Recipe
   template_name = 'recipes/main.html'
+
+def index(request):
+	recipes = Recipe.objects.all()  				# fetching all post objects from database
+	p = Paginator(recipes, 6)  							# creating a paginator object
+																					
+	page_number = request.GET.get('page')		# getting the desired page number from url
+	try:
+			page_obj = p.get_page(page_number)  # returns the desired page object
+	except PageNotAnInteger:								# if page_number is not an integer then assign the first page
+			page_obj = p.page(1)
+	except EmptyPage:			
+			page_obj = p.page(p.num_pages)  		# if page is empty then return last page
+	context = {'page_obj': page_obj}
+
+	return render(request, 'recipes/main.html', context)	# sending the page object to index.html
 
 class RecipeDetailView(LoginRequiredMixin, DetailView):
   model = Recipe

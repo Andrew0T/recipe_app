@@ -30,24 +30,34 @@
       </nav>
     </header>
     <div class="grid">
-       {% for object in object_list %}
-      <div class="grid_item">
-        <div>
-          <a href="{{object.get_absolute_url}}">
-            <img class="recipe_image" src="{{object.pic.url}}" alt="{{object.name}}"/>
-          </a>
-        </div>
-        <div>
-          <a class="recipe_name" href="{{object.get_absolute_url}}">
-            {{object.name}}
-          </a>{% comment%} add links to recipe names  {% endcomment%}
-        </div>
-      </div>
-        {% endfor %}
-    </div>
+      {% for object in page_obj.object_list %}
+     <div class="grid_item">
+       <div>
+         <a href="{{object.get_absolute_url}}">
+           <img class="recipe_image" src="{% static 'recipes/' %}{{ object.pic.url }}" alt="{{object.name}}"/>
+         </a>
+       </div>
+       <div>
+         <a class="recipe_name" href="{{object.get_absolute_url}}">
+           {{object.name}}
+         </a>{% comment%} add links to recipe names  {% endcomment%}
+       </div>
+     </div>
+     {% endfor %}
+   </div>
     <br>
     <br>
     <div>
+      <center>
+        {%if page_obj.has_previous %} {# whether the previous page exists #}
+            <a href="?page={{page_obj.previous_page_number}}"><</a> {# link to the prev page #}
+        {% endif %}
+        <span>{{page_obj.number}}</span> {# the current page number #}
+        
+        {%if page_obj.has_next %} {# whether the next page exists #}
+            <a href="?page={{page_obj.next_page_number}}">></a> {# link to the next page #}
+        {% endif %}
+      </center>
       <button class="back__btn" onclick="goBack()">Go Back</button>
     </div>
     <script>function goBack(){window.history.back();}</script>
