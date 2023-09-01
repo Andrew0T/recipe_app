@@ -44,6 +44,9 @@ Challenges:
     1. was unable to move the database from sqlite to a format that heroku would read, searched and this answer
      https://stackoverflow.com/questions/61336258/how-to-transfer-your-local-sqlite3-data-to-heroku#61336319
     
-    2. the recipe images fail to load and console error 404, not sure why. Searching for answers
+    2. the recipe images failed to load and console error 404, not sure why. 
+        Tutor's Answer: there were several steps 
+        moved the recipe images within the static folder and renamed it to recipes
+        because the file is saved as recipes/image.jpg.
+        In html pages update the file image name
     
-
