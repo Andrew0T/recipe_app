@@ -28,7 +28,11 @@ Technologies
 
 Video
 
-https://github.com/Andrew0T/recipe_app/assets/113891991/4051e89f-a8be-46ca-9e24-82f2bd64c4cc
+
+
+https://github.com/Andrew0T/recipe_app/assets/113891991/59b5e1d6-3f90-4e8b-8921-8c99033257ae
+
+
 
 
 To see the live version
